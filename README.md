@@ -45,6 +45,10 @@ Small APK (arm64 only):
 
 `node build-apk.js`
 
+No-bump (keep version and versionCode):
+
+`node build-apk.js --no-bump`
+
 Universal APK (all ABIs):
 
 `node build-apk.js --universal`
@@ -55,7 +59,19 @@ Other options:
 
 `node build-apk.js --abis arm64-v8a,x86_64`
 
+Build all variants (no-bump):
+
+`node build-apk.js --no-bump`
+
+`node build-apk.js --no-bump --universal`
+
+`node build-apk.js --no-bump --abi armeabi-v7a`
+
+`node build-apk.js --no-bump --abis arm64-v8a,x86_64`
+
 APKs are placed in `releases/`.
+
+Best for modern Android (15+): use the `arm64-v8a` APK (smaller and optimized).
 
 Note: builds are debug-signed unless you configure a release keystore.
 
